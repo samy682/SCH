@@ -1,0 +1,7 @@
+{
+  "name": "Sch",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
