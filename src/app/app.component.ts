@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   public appPages = [
     {
       title: 'Acceuil',
-      url: '/folder/Acceuil',
+      url: '/accueil',
       icon: 'home'
     },
     {
@@ -27,6 +27,7 @@ export class AppComponent implements OnInit {
       url: '/folder/Connexion',
       icon: 'log-in'
     }
+
   ];
  
 
