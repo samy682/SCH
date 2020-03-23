@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'Connexion',
-      url: '/folder/Connexion',
+      url: '/login',
       icon: 'log-in'
     }
 
