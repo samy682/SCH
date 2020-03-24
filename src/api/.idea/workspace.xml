@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="def56f5e-7651-474d-b1c7-f1c657be3ff1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1XRTzUC0iqLhhfbJQMPpsaut1ch" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="D:/Programmes/wamp/www/api" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programmes\Wampp\www\projet_archi_n_tiers\api" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programmes\wamp\www\projet_archi_n_tiers\api\synchronization_module\" />
+      <recent name="D:\Programmes\Wampp\www\projet_archi_n_tiers\api\controller" />
+      <recent name="D:\Programmes\Wampp\www\projet_archi_n_tiers\api\router" />
+      <recent name="D:\Programmes\Wampp\www\projet_archi_n_tiers\api\database" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="def56f5e-7651-474d-b1c7-f1c657be3ff1" name="Default Changelist" comment="" />
+      <created>1581008169559</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581008169559</updated>
+      <workItem from="1581008170941" duration="4976000" />
+      <workItem from="1581611275653" duration="8000" />
+      <workItem from="1581930918151" duration="983000" />
+      <workItem from="1581933170869" duration="564000" />
+      <workItem from="1581948426317" duration="7682000" />
+      <workItem from="1582015357852" duration="663000" />
+      <workItem from="1582031364967" duration="11333000" />
+      <workItem from="1585042011076" duration="584000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="288" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1581949463702">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="288" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864@0.0.1536.864" timestamp="1581949463702" />
+    <state x="499" y="183" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585042042886">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="499" y="183" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1585042042886" />
+    <state x="549" y="191" key="FileChooserDialogImpl" timestamp="1585042594188">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="549" y="191" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1585042594188" />
+    <state x="540" y="268" key="NewPhpClassDialog" timestamp="1582042367437">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="540" y="268" key="NewPhpClassDialog/0.0.1536.864@0.0.1536.864" timestamp="1582042367437" />
+    <state x="604" y="365" key="NewPhpFileDialog" timestamp="1581948708452">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="604" y="365" key="NewPhpFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1581948708452" />
+    <state x="477" y="261" key="com.intellij.ide.util.TipDialog" timestamp="1582031377441">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="477" y="261" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1582031377441" />
+    <state x="425" y="197" key="run.anything.popup" timestamp="1582041127326">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1582041127326" />
+  </component>
+</project>
