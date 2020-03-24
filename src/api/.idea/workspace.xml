@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="def56f5e-7651-474d-b1c7-f1c657be3ff1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../package.json" afterDir="false" />
-    </list>
+    <list default="true" id="def56f5e-7651-474d-b1c7-f1c657be3ff1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +26,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/Programmes/wamp/www/api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -70,7 +68,8 @@
       <workItem from="1581948426317" duration="7682000" />
       <workItem from="1582015357852" duration="663000" />
       <workItem from="1582031364967" duration="11333000" />
-      <workItem from="1585042011076" duration="584000" />
+      <workItem from="1585042011076" duration="346000" />
+      <workItem from="1585042596685" duration="3118000" />
     </task>
     <servers />
   </component>
@@ -86,10 +85,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="183" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1585042042886" />
-    <state x="549" y="191" key="FileChooserDialogImpl" timestamp="1585042594188">
+    <state x="549" y="191" key="FileChooserDialogImpl" timestamp="1581949831058">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="191" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1585042594188" />
+    <state x="549" y="191" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1581949831058" />
     <state x="540" y="268" key="NewPhpClassDialog" timestamp="1582042367437">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
