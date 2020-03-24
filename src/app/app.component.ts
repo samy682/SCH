@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'Liste des plongées',
-      url: '/folder/Plongées',
+      url: '/liste-plongees',
       icon: 'list'
     },
     {

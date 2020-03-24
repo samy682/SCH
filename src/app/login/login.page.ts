@@ -8,7 +8,16 @@ import { Component } from '@angular/core';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
   template: `
+      
       <form (ngSubmit)="logForm()">
+      <ion-header [translucent]="true">
+        <ion-toolbar >
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+            </ion-buttons>
+          <ion-title>Connexion</ion-title>
+        </ion-toolbar>
+      </ion-header>
       <ion-item lines="full">
         <ion-label position="floating">Email</ion-label>
         <ion-input type="text" [(ngModel)]="loginData.email" name="Email"></ion-input>
@@ -25,6 +34,7 @@ import { Component } from '@angular/core';
         </ion-col>
       </ion-row>
     </form>
+    
   `,
 })
 
