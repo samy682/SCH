@@ -23,4 +23,10 @@ class IndexController
         echo json_encode($obj);
     }
 
+    public function getDetailPlongee($id){
+        $result = Database::getPDO()->query("SELECT * FROM plongee WHERE id = ".$id);
+        $obj = $result->fetchAll();
+        echo json_encode($obj);
+    }
+
 }

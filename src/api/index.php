@@ -9,7 +9,7 @@ $router = new Router($_GET['url']);
 
 // Routes GET
 $router->get('/get/plongee', 'Index#getPlongee');
-
+$router->get('/get/plongee/details/:id', 'Index#getDetailPlongee');
 
 // Routes POST
 $router->post('/post/membre', 'Index#getMembre');
