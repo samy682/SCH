@@ -21,6 +21,10 @@ const routes: Routes = [
   },  {
     path: 'liste-plongees',
     loadChildren: () => import('./liste-plongees/liste-plongees.module').then( m => m.ListePlongeesPageModule)
+  },
+  {
+    path: 'details-plongee',
+    loadChildren: () => import('./details-plongee/details-plongee.module').then( m => m.DetailsPlongeePageModule)
   }
 
 ];

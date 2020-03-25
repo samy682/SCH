@@ -37,5 +37,8 @@ export class ListePlongeesPage  {
     
   }
 
+  ouvrirDetailsPlongee(){
+    console.log("looool");
+  }
 
 }
