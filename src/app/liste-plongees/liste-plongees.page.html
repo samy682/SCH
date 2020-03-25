@@ -10,9 +10,9 @@
 <ion-content padding>
   <ion-list>
     
-    <ion-item routerLink="/details-plongee" *ngFor="let plongee of plongeeList">
+    <ion-item *ngFor="let plongee of plongeeList">
      
-      <ion-button shape="round" color="secondary" (click)="ouvrirDetailsPlongee()">
+      <ion-button shape="round" color="secondary" (click)="ouvrirDetailsPlongee(plongee)">
         {{ plongee[0] }} 
         {{ plongee[7] }}    
         {{ plongee[1] }}  
