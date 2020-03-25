@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="def56f5e-7651-474d-b1c7-f1c657be3ff1" name="Default Changelist" comment="" />
+    <list default="true" id="def56f5e-7651-474d-b1c7-f1c657be3ff1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../action_report.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../action_report.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/synchronization_module/Synchronization.php" beforeDir="false" afterPath="$PROJECT_DIR$/synchronization_module/Synchronization.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +18,7 @@
     </execution>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1XRTzUC0iqLhhfbJQMPpsaut1ch" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -26,7 +31,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../action-reports" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -68,9 +73,6 @@
       <workItem from="1581948426317" duration="7682000" />
       <workItem from="1582015357852" duration="663000" />
       <workItem from="1582031364967" duration="11333000" />
-      <workItem from="1585042011076" duration="346000" />
-      <workItem from="1585042596685" duration="4237000" />
-      <workItem from="1585140002689" duration="1058000" />
     </task>
     <servers />
   </component>
@@ -82,10 +84,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="288" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864@0.0.1536.864" timestamp="1581949463702" />
-    <state x="499" y="183" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585042042886">
+    <state x="499" y="183" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581010024265">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="499" y="183" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1585042042886" />
+    <state x="499" y="183" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1581010024265" />
     <state x="549" y="191" key="FileChooserDialogImpl" timestamp="1581949831058">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -98,10 +100,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="604" y="365" key="NewPhpFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1581948708452" />
-    <state x="477" y="261" key="com.intellij.ide.util.TipDialog" timestamp="1585140028956">
+    <state x="477" y="261" key="com.intellij.ide.util.TipDialog" timestamp="1582031377441">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="477" y="261" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1585140028956" />
+    <state x="477" y="261" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1582031377441" />
     <state x="425" y="197" key="run.anything.popup" timestamp="1582041127326">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

@@ -1,5 +1,5 @@
 DROP DATABASE IF EXISTS sch;
-CREATE DATABASE sch character set UTF8 collate utf8_bin;
+CREATE DATABASE sch character set UTF8 collate utf8_general_ci;
 
 USE sch;
 

@@ -2,18 +2,22 @@
 
 require_once 'database/Database.php';
 require_once 'router/Router.php';
+
+require_once 'synchronization_module/Synchronization.php';
+
  
 new Database();
 
 $router = new Router($_GET['url']);
 
 // Routes GET
-$router->get('/get/plongee', 'Index#getPlongee');
-$router->get('/get/plongee/details/:id', 'Index#getDetailPlongee');
+$router->get('/pompier', 'Pompier#getPompier');
+$router->get('/', 'Index#home');
+$router->get('/synchronize', 'Index#synchronize');
 
 // Routes POST
-$router->post('/post/membre', 'Index#getMembre');
-$router->post('/post/niveau', 'Index#getNiveau');
+$router->post('/pompier/authentication','Pompier#getAuthentication');
+$router->post('/pompier/rights','Pompier#getRights');
 
 // Router run
 $router->run();
