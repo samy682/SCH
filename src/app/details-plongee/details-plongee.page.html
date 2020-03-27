@@ -15,21 +15,34 @@
     
     <ion-card-content>
       <ion-card-title>
-       Detail de la plonge numero .....****
+       Details de la plonge n° {{plongee[0]}} 
       </ion-card-title>
 
       <p>
-        Email: Test
+        Date: {{plongee[1]}} 
         <br/>
-        Phone: Test
+        Type: {{plongee[2]}} 
         <br/>
-        Nationality: OMOUK
+        Lieu: {{plongee[3]}} 
         <br/>
-        City: Robin
+        DP: {{plongee[4]}} {{plongee[5]}}  
         <br/>
-        State: La tchoin
-        <br/>
-        Birth date: 6658965
+        Liste des membres:
+      
+          
+          <ion-list>
+            
+            <ion-item *ngFor="let membre of membresList">
+             
+             {{membre[0]}}
+             {{membre[1]}}
+              
+              
+            </ion-item>
+          
+          </ion-list>
+     
+        
       </p>
     </ion-card-content>
   </ion-card>
