@@ -6,3 +6,45 @@
     <ion-title>Details de la plongée</ion-title>
   </ion-toolbar>
 </ion-header>
+
+
+<ion-content>
+
+  <ion-card>
+    <img src="../assets/plongee.jpg"/>
+    
+    <ion-card-content>
+      <ion-card-title>
+       Details de la plonge n° {{plongee[0]}} 
+      </ion-card-title>
+
+      <p>
+        Date: {{plongee[1]}} 
+        <br/>
+        Type: {{plongee[2]}} 
+        <br/>
+        Lieu: {{plongee[3]}} 
+        <br/>
+        DP: {{plongee[4]}} {{plongee[5]}}  
+        <br/>
+        Liste des membres:
+      
+          
+          <ion-list>
+            
+            <ion-item *ngFor="let membre of membresList">
+             
+             {{membre[0]}}
+             {{membre[1]}}
+              
+              
+            </ion-item>
+          
+          </ion-list>
+     
+        
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
