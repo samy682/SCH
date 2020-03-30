@@ -10,13 +10,16 @@
 <ion-content padding>
   <ion-list>
     
-    <ion-item *ngFor="let plongee of plongeeList">
+    <ion-item shape="round" detail="false" button  (click)="ouvrirDetailsPlongee(plongee)" *ngFor="let plongee of plongeeList">
      
-      <ion-button shape="round" color="secondary" (click)="ouvrirDetailsPlongee(plongee)">
-        {{ plongee[1] }} 
-        {{ plongee[2] }}    
-        {{ plongee[3] }}  
-      </ion-button>
+      <div class="item-content">
+      
+      
+        Type : {{ plongee[1] }} <br>
+        Lieu : {{ plongee[2] }}  <br>  
+        Directeur de plongée : {{ plongee[3] }}  {{ plongee[4] }}  
+      </div>
+      
     </ion-item>
   
   </ion-list>
