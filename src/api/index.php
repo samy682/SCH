@@ -14,6 +14,7 @@ $router->get('/get/plongee', 'Index#getPlongee');
 $router->get('/get/plongee/details/:id', 'Index#getDetailPlongee');
 $router->get('/get/plongee/participants/:id', 'Index#getParticipants');
 $router->get('/get/auth/:email-:password', 'Index#auth');
+$router->get('/get/plongee/membre/:idPlongee-:idMembre', 'Index#ajoutMembrePlongee');
 
 // Routes POST
 $router->post('/post/membre', 'Index#getMembre');

@@ -69,6 +69,7 @@ class IndexController
         echo json_encode($obj);
     }
 
-
-
+    public function ajoutMembrePlongee($idPlongee, $idMembre){
+        $result = Database::getPDO()->query('INSERT INTO participe VALUES("'. $idMembre .'", "'. $idPlongee .'", NOW())');
+    }
 }
