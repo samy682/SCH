@@ -1,4 +1,8 @@
 import {Validators, FormBuilder, FormGroup } from '@angular/forms';
+import {HttpClient, HttpResponse} from '@angular/common/http';
+import { Observable, empty } from 'rxjs';
+import { ConnectionService } from '../connection.service';
+import { NavController, NavParams } from '@ionic/angular';
 
 
 
@@ -41,10 +45,38 @@ import { Component } from '@angular/core';
 
 export class LoginPage {
 
-  
-  loginData = {};
+  connexion: Observable<any>;
+  connectionService: ConnectionService;
+
+  constructor(public httpClient: HttpClient, public navCtrl: NavController){
+    this.connectionService = new ConnectionService();
+  }
+
+  loginData = {
+    email: "",
+    password: ""
+  };
+
   logForm() {
-    console.log(this.loginData);
+    this.connexion = this.httpClient.get('http://api/get/auth/' + this.loginData.email + "-" + this.loginData.password)
+    this.connexion.subscribe(data => {
+        if(data.length === 0){
+          alert("mauvais identifiant ou mdp");
+        } else {
+          this.connectionService.id = data[0][0];
+          this.connectionService.prenom = data[0][1];
+          this.connectionService.nom = data[0][2];
+          this.connectionService.email = data[0][4];
+          this.navCtrl.navigateForward('/accueil');
+        }
+      
+    },
+    err => {
+      console.log('Error: ' + err.error);
+      console.log('Name: ' + err.name);
+      console.log('Message: ' + err.message);
+      console.log('Status: ' + err.status);
+    });
   }
 
 

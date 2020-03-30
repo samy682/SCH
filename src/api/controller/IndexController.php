@@ -23,8 +23,7 @@ class IndexController
     public function home(){}
 
     public function getPlongee(){
-
-        $result = Database::getPDO()->query("SELECT plongee.id,plongee.date_heure, plongee.type_plongee, lieu_plongee.adr_commune, membre.nom, membre.prenom FROM plongee
+        $result = Database::getPDO()->query("SELECT plongee.date_heure, plongee.type_plongee, lieu_plongee.adr_commune, membre.nom, membre.prenom FROM plongee
          INNER JOIN lieu_plongee ON plongee.id_lieu = lieu_plongee.id
          INNER JOIN membre ON plongee.id_dp = membre.id WHERE plongee.date_heure < NOW()");
         $obj = $result->fetchAll();
@@ -64,8 +63,8 @@ class IndexController
         echo json_encode($obj);
     }
 
-    public function auth(){
-        $result = Database::getPDO()->query("SELECT * FROM membre WHERE login=".$_POST["login"]. " AND password=".$_POST["password"]);
+    public function auth($email, $password){
+        $result = Database::getPDO()->query('SELECT * FROM membre WHERE login="'.$email. '" AND password="'.$password.'"');
         $obj = $result->fetchAll();
         echo json_encode($obj);
     }

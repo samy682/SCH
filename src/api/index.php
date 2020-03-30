@@ -13,11 +13,12 @@ header('Content-type: text/html; charset=UTF-8');
 $router->get('/get/plongee', 'Index#getPlongee');
 $router->get('/get/plongee/details/:id', 'Index#getDetailPlongee');
 $router->get('/get/plongee/participants/:id', 'Index#getParticipants');
+$router->get('/get/auth/:email-:password', 'Index#auth');
 
 // Routes POST
 $router->post('/post/membre', 'Index#getMembre');
 $router->post('/post/niveau', 'Index#getNiveau');
-$router->post('/post/auth', 'Index#auth');
+
 
 // Router run
 $router->run();
