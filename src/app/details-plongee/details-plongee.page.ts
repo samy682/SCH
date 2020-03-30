@@ -15,8 +15,9 @@ export class DetailsPlongeePage implements OnInit {
   plongee: Observable<any>;
   membres: Observable<any>;
   membresList;
+  ajout: Observable<any>;
 
-  constructor(private activatedRoute: ActivatedRoute, public httpClient: HttpClient,public connexion: ConnectionService){
+  constructor(private activatedRoute: ActivatedRoute, public httpClient: HttpClient,public connexion: ConnectionService,public navCtrl: NavController){
   }
 
    ngOnInit(){
@@ -49,6 +50,20 @@ export class DetailsPlongeePage implements OnInit {
 
   inscriptionPlongee()
   {
+    //console.log("Id du connecté : ",ConnectionService._instance.id);
+    //console.log("Test");
+    this.ajout = this.httpClient.get('http://api/get/plongee/membre/'+this.plongee[0]+'-'+ConnectionService._instance.id);
+    this.ajout.subscribe(data => {
+      this.ajout = data;
+      console.log(this.ajout);
+    },
+    err => {
+      console.log('Error: ' + err.error);
+      console.log('Name: ' + err.name);
+      console.log('Message: ' + err.message);
+      console.log('Status: ' + err.status);
+    });
+    this.navCtrl.navigateForward('/liste-plongees');
     
   }
 
