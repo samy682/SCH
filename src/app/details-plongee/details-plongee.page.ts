@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController,NavParams } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
+import { ConnectionService } from '../connection.service';
 import {HttpClient, HttpResponse} from '@angular/common/http';
 import { Observable } from 'rxjs';
 @Component({
@@ -15,7 +16,7 @@ export class DetailsPlongeePage implements OnInit {
   membres: Observable<any>;
   membresList;
 
-  constructor(private activatedRoute: ActivatedRoute, public httpClient: HttpClient){
+  constructor(private activatedRoute: ActivatedRoute, public httpClient: HttpClient,public connexion: ConnectionService){
   }
 
    ngOnInit(){
@@ -45,5 +46,10 @@ export class DetailsPlongeePage implements OnInit {
     });
 
 }
+
+  inscriptionPlongee()
+  {
+    
+  }
 
 }
