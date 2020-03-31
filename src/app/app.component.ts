@@ -65,9 +65,11 @@ export class AppComponent implements OnInit {
       this.removeUri("Déconnexion");
       this.removeUri("Gonfleurs");
     } else {
+
       this.removeUri("Connexion");
       this.addUri("Gonfleurs", "/liste-gonfleurs", "list");
       this.addUri("Déconnexion", "/logout", "log-out");
+
     }
   }
 

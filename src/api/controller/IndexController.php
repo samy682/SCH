@@ -23,7 +23,7 @@ class IndexController
     public function home(){}
 
     public function getPlongee(){
-        $result = Database::getPDO()->query("SELECT plongee.date_heure, plongee.type_plongee, lieu_plongee.adr_commune, membre.nom, membre.prenom FROM plongee
+        $result = Database::getPDO()->query("SELECT plongee.id, plongee.date_heure, plongee.type_plongee, lieu_plongee.adr_commune, membre.nom, membre.prenom FROM plongee
          INNER JOIN lieu_plongee ON plongee.id_lieu = lieu_plongee.id
          INNER JOIN membre ON plongee.id_dp = membre.id WHERE plongee.date_heure < NOW()");
         $obj = $result->fetchAll();
@@ -46,7 +46,7 @@ class IndexController
     }
 
     public function getDetailPlongee($id){
-        $result = Database::getPDO()->query("SELECT plongee.date_heure, plongee.type_plongee, lieu_plongee.adr_commune, membre.nom, membre.prenom FROM plongee
+        $result = Database::getPDO()->query("SELECT plongee.id, plongee.date_heure, plongee.type_plongee, lieu_plongee.adr_commune, membre.nom, membre.prenom FROM plongee
          INNER JOIN lieu_plongee ON plongee.id_lieu = lieu_plongee.id
          INNER JOIN membre ON plongee.id_dp = membre.id WHERE plongee.id = ".$id);
         $obj = $result->fetch();
@@ -81,7 +81,7 @@ class IndexController
     }
 
     public function getGonfleur(){
-        $result = Database::getPDO()->query('SELECT plongee.id, membre.prenom, membre.nom, membre.mail_redirection FROM plongee
+        $result = Database::getPDO()->query('SELECT plongee.id, plongee.date_heure, membre.prenom, membre.nom, membre.mail_redirection FROM plongee
                                             INNER JOIN membre ON plongee.id_gonfleur = membre.id');
         $obj = $result->fetchAll();
         echo json_encode($obj);

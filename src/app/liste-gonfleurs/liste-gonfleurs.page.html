@@ -1,9 +1,25 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>liste-gonfleurs</ion-title>
+<ion-header [translucent]="true">
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Liste des gonfleurs</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content padding>
+  <ion-list>
+    
+    <ion-item shape="round" detail="false" button (click)="ouvrirDetailsPlongee(gonfleur)" *ngFor="let gonfleur of gonfleurList">
+     
+      <div class="item-content">
+      
+      
+        Date : {{ gonfleur[1] }} <br>
+        Personne : {{ gonfleur[2] }} {{ gonfleur[3] }}   <br> 
+      </div>
+      
+    </ion-item>
+  
+  </ion-list>
 </ion-content>
