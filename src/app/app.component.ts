@@ -64,10 +64,17 @@ export class AppComponent implements OnInit {
       this.appPages[2].url = "/login";
       this.appPages[2].icon = "log-in";
     } else {
+
+
+      
+      this.appPages[2].title = "Liste des gonfleurs";
+      this.appPages[2].url = "/liste-gonfleurs";
+      this.appPages[2].icon = "list";
+      
+
       this.appPages[2].title = "déconnexion";
       this.appPages[2].url = "/logout";
       this.appPages[2].icon = "/log-out";
-      
     }
   }
 }
