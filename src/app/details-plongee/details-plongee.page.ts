@@ -22,7 +22,7 @@ export class DetailsPlongeePage implements OnInit {
 
    ngOnInit(){
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
-    const body = {id: this.id};
+    console.log("L'id est : ",this.id)
     this.plongee = this.httpClient.get('http://api/get/plongee/details/' + this.id)
     this.plongee.subscribe(data => {
       this.plongee = data;
@@ -50,8 +50,7 @@ export class DetailsPlongeePage implements OnInit {
 
   inscriptionPlongee()
   {
-    //console.log("Id du connecté : ",ConnectionService._instance.id);
-    //console.log("Test");
+    
     this.ajout = this.httpClient.get('http://api/get/plongee/membre/'+this.plongee[0]+'-'+ConnectionService._instance.id);
     this.ajout.subscribe(data => {
       this.ajout = data;
