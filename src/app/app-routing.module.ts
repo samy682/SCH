@@ -26,7 +26,11 @@ const routes: Routes = [
   {
     path: 'details-plongee/:id',
     loadChildren: () => import('./details-plongee/details-plongee.module').then( m => m.DetailsPlongeePageModule)
+  },  {
+    path: 'logout',
+    loadChildren: () => import('./logout/logout.module').then( m => m.LogoutPageModule)
   }
+
 
 ];
 

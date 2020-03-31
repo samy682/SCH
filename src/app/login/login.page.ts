@@ -3,6 +3,7 @@ import {HttpClient, HttpResponse} from '@angular/common/http';
 import { Observable, empty } from 'rxjs';
 import { ConnectionService } from '../connection.service';
 import { NavController, NavParams } from '@ionic/angular';
+import { AppComponent } from '../app.component';
 
 
 
@@ -48,7 +49,7 @@ export class LoginPage {
   connexion: Observable<any>;
   connectionService: ConnectionService;
 
-  constructor(public httpClient: HttpClient, public navCtrl: NavController){
+  constructor(public httpClient: HttpClient, public navCtrl: NavController, public app: AppComponent){
     this.connectionService = new ConnectionService();
   }
 
@@ -67,9 +68,9 @@ export class LoginPage {
           this.connectionService.prenom = data[0][1];
           this.connectionService.nom = data[0][2];
           this.connectionService.email = data[0][4];
+          this.app.maj();
           this.navCtrl.navigateForward('/accueil');
         }
-      
     },
     err => {
       console.log('Error: ' + err.error);

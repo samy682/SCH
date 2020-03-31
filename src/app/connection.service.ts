@@ -49,4 +49,8 @@ export class ConnectionService {
     this._email = newEmail;
   }
 
+  disconnect():void {
+    ConnectionService._instance = null;
+  }
+
 }
