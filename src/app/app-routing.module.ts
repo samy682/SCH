@@ -29,6 +29,10 @@ const routes: Routes = [
   },  {
     path: 'logout',
     loadChildren: () => import('./logout/logout.module').then( m => m.LogoutPageModule)
+  },
+  {
+    path: 'liste-gonfleurs',
+    loadChildren: () => import('./liste-gonfleurs/liste-gonfleurs.module').then( m => m.ListeGonfleursPageModule)
   }
 
 

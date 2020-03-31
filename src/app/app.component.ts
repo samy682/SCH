@@ -32,13 +32,6 @@ export class AppComponent implements OnInit {
       icon: 'log-in'
     }
   ];
-  public appPages2 = [
-    {
-      title: 'Test',
-      url: '/accueil',
-      icon: 'home'
-    }
-  ];
  
   private connexionService: ConnectionService
 
@@ -74,6 +67,7 @@ export class AppComponent implements OnInit {
       this.appPages[2].title = "déconnexion";
       this.appPages[2].url = "/logout";
       this.appPages[2].icon = "/log-out";
+      
     }
   }
 }
