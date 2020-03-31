@@ -34,6 +34,7 @@ export class AppComponent implements OnInit {
   ];
  
   private connexionService: ConnectionService
+  public obj = {}
 
   constructor(
     private platform: Platform,
@@ -60,13 +61,39 @@ export class AppComponent implements OnInit {
   maj(){
     this.connexionService = new ConnectionService();
     if(this.connexionService.id == null){
-      this.appPages[2].title = "connexion";
-      this.appPages[2].url = "/login";
-      this.appPages[2].icon = "log-in";
+      this.addUri("Connexion", "/login", "log-in");
+      this.removeUri("Déconnexion");
+      this.removeUri("Gonfleurs");
     } else {
-      this.appPages[2].title = "déconnexion";
-      this.appPages[2].url = "/logout";
-      this.appPages[2].icon = "/log-out";
+      this.removeUri("Connexion");
+      this.addUri("Gonfleurs", "/liste-gonfleurs", "list");
+      this.addUri("Déconnexion", "/logout", "log-out");
     }
+  }
+
+  addUri(title: string, url: string, icon: string){
+    let exist: boolean = false;
+    for (let entry of this.appPages) {
+      if(entry.title === title){
+        exist = true;
+      }
+    }
+    if(!exist){
+      this.appPages.push({
+        title: title,
+        url: url,
+        icon: icon
+      });
+    }
+  }
+
+  removeUri(title: string){
+    let id = 0;
+      for (let entry of this.appPages) {
+        if(entry.title === title){
+          this.appPages.splice(id, 1);
+        }
+        id++;
+      }
   }
 }
