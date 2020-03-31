@@ -29,6 +29,13 @@ export class AppComponent implements OnInit {
     }
 
   ];
+  public appPages2 = [
+    {
+      title: 'Test',
+      url: '/accueil',
+      icon: 'home'
+    }
+  ];
  
 
   constructor(

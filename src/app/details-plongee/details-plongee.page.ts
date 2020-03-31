@@ -63,6 +63,7 @@ export class DetailsPlongeePage implements OnInit {
       console.log('Message: ' + err.message);
       console.log('Status: ' + err.status);
     });
+    
     this.navCtrl.navigateForward('/liste-plongees');
     
   }
