@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Liste des secu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    
+    <ion-item shape="round" detail="false" button (click)="ouvrirDetailsPlongee(secu)" *ngFor="let secu of secuList">
+     
+      <div class="item-content">
+      
+      
+        Date : {{ secu[1] }} <br>
+        Personne : {{ secu[2] }} {{ secu[3] }}   <br> 
+      </div>
+      
+    </ion-item>
+  
+  </ion-list>
+</ion-content>

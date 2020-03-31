@@ -26,7 +26,6 @@ export class ListePlongeesPage  {
   }
 
   ouvrirDetailsPlongee(plongee){
-    console.log(plongee);
     this.navCtrl.navigateForward('/details-plongee/' + plongee[0]);
   }
 

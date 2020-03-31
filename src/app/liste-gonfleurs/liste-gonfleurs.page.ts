@@ -29,6 +29,7 @@ export class ListeGonfleursPage implements OnInit {
     }) 
     
   }
+  
   ouvrirDetailsPlongee(gonfleur){
     this.navCtrl.navigateForward('/details-plongee/' + gonfleur[0]);
   }

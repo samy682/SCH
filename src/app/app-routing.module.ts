@@ -26,14 +26,19 @@ const routes: Routes = [
   {
     path: 'details-plongee/:id',
     loadChildren: () => import('./details-plongee/details-plongee.module').then( m => m.DetailsPlongeePageModule)
-  },  {
+  },
+  {
     path: 'logout',
     loadChildren: () => import('./logout/logout.module').then( m => m.LogoutPageModule)
   },
   {
     path: 'liste-gonfleurs',
     loadChildren: () => import('./liste-gonfleurs/liste-gonfleurs.module').then( m => m.ListeGonfleursPageModule)
+  },  {
+    path: 'liste-secu',
+    loadChildren: () => import('./liste-secu/liste-secu.module').then( m => m.ListeSecuPageModule)
   }
+
 
 
 ];
