@@ -22,7 +22,6 @@ export class ListePlongeesPage  {
     this.plonge
     .subscribe(data => {
      this.plongeeList = data; 
-     console.log(data);
     }) 
   }
 

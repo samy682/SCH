@@ -11,7 +11,6 @@ export class AccueilPage implements OnInit {
   constructor(public connexion: ConnectionService) { }
 
   ngOnInit() {
-    console.log(ConnectionService._instance);
   }
 
 }
