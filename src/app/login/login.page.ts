@@ -49,7 +49,7 @@ export class LoginPage {
   connexion: Observable<any>;
   connectionService: ConnectionService;
 
-  constructor(public httpClient: HttpClient, public navCtrl: NavController, public app: AppComponent){
+  constructor(public httpClient: HttpClient, public navCtrl: NavController, public app: AppComponent,public connexion1: ConnectionService){
     this.connectionService = new ConnectionService();
   }
 
@@ -61,15 +61,23 @@ export class LoginPage {
   logForm() {
     this.connexion = this.httpClient.get('http://api/get/auth/' + this.loginData.email + "-" + this.loginData.password)
     this.connexion.subscribe(data => {
+      
         if(data.length === 0){
-          alert("mauvais identifiant ou mdp");
+          const alert = document.createElement('ion-alert');
+          alert.header = 'Attention';
+          alert.subHeader = 'Connexion impossible';
+          alert.message = 'Identifiant ou mot de passe eroné.';
+          alert.buttons = ['OK'];
+          document.body.appendChild(alert);
+          return alert.present();
         } else {
-          this.connectionService.id = data[0][0];
-          this.connectionService.prenom = data[0][1];
-          this.connectionService.nom = data[0][2];
-          this.connectionService.email = data[0][4];
-          this.app.maj();
-          this.navCtrl.navigateForward('/accueil');
+        
+          this.connexion1.id = data[0][0];
+          this.connexion1.prenom = data[0][1];
+          this.connexion1.nom = data[0][2];
+          this.connexion1.email = data[0][4];
+         
+          this.navCtrl.navigateForward('/accueil'); this.app.maj();
         }
     },
     err => {

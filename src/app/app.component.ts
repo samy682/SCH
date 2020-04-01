@@ -33,13 +33,14 @@ export class AppComponent implements OnInit {
     }
   ];
  
-  private connexionService: ConnectionService
+
   public obj = {}
 
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
+    public connexion: ConnectionService
   ) {
     this.initializeApp();
   }
@@ -59,11 +60,13 @@ export class AppComponent implements OnInit {
   }
 
   maj(){
-    this.connexionService = new ConnectionService();
-    if(this.connexionService.id == null){
+    this.connexion = new ConnectionService();
+    console.log("Test MAJ",this.connexion.id)
+    if(this.connexion.id == null){
       this.addUri("Connexion", "/login", "log-in");
       this.removeUri("Déconnexion");
       this.removeUri("Gonfleurs");
+      this.removeUri("Secu");
     } else {
       this.removeUri("Connexion");
       this.addUri("Gonfleurs", "/liste-gonfleurs", "list");

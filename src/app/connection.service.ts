@@ -51,6 +51,11 @@ export class ConnectionService {
 
   disconnect():void {
     ConnectionService._instance = null;
+    this._id= null;
+    this._email=null;
+    this._nom=null;
+    this._prenom=null;
+    
   }
 
 }

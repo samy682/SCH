@@ -11,6 +11,9 @@ export class AccueilPage implements OnInit {
   constructor(public connexion: ConnectionService) { }
 
   ngOnInit() {
+    console.log("Id de connexion : ",this.connexion.id)
+    console.log("Nom de connexion : ",this.connexion.nom)
+    console.log("Prenom de connexion : ",this.connexion.prenom)
   }
 
 }
