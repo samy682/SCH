@@ -61,7 +61,6 @@ export class AppComponent implements OnInit {
 
   maj(){
     this.connexion = new ConnectionService();
-    console.log("Test MAJ", this.connexion.id)
     if(this.connexion.id == null){
       this.addUri("Connexion", "/login", "log-in");
       this.removeUri("Déconnexion");

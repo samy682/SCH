@@ -17,15 +17,11 @@ export class ListePlongeesPage implements OnInit {
   navParams: NavParams;
 
   constructor(public httpClient: HttpClient, public navCtrl: NavController,public connexion: ConnectionService) { 
-    console.log("Id de connexion : ",this.connexion.id)
-    console.log("Nom de connexion : ",this.connexion.nom)
-    console.log("Prenom de connexion : ",this.connexion.prenom)
+    this.connexion = new ConnectionService;
     this.plonge = this.httpClient.get('http://api/get/plongee');
     this.plonge
     .subscribe(data => {
-     this.plongeeList = data; 
-    // console.log("nom connexion : ", this.connexion.nom);
-    
+     this.plongeeList = data;     
       for(let plongee of this.plongeeList)
       {
         if(this.connexion.nom ==  plongee[5] && this.connexion.prenom ==  plongee[4] )
@@ -51,7 +47,6 @@ export class ListePlongeesPage implements OnInit {
   }
 
   ouvrirDetailsPlongee(plongee){
-    //console.log("Id de connexion : ",this.connexion.id)
     if(this.connexion.id == null && this.connexion.nom == null)
     {
       const alert = document.createElement('ion-alert');
