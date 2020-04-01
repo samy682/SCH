@@ -47,9 +47,8 @@ import { Component } from '@angular/core';
 export class LoginPage {
 
   connexion: Observable<any>;
-  connectionService: ConnectionService;
 
-  constructor(public httpClient: HttpClient, public navCtrl: NavController, public app: AppComponent,public connexion1: ConnectionService){
+  constructor(public httpClient: HttpClient, public navCtrl: NavController, public app: AppComponent,public connectionService: ConnectionService){
     this.connectionService = new ConnectionService();
   }
 
@@ -71,13 +70,15 @@ export class LoginPage {
           document.body.appendChild(alert);
           return alert.present();
         } else {
-        
-          this.connexion1.id = data[0][0];
-          this.connexion1.prenom = data[0][1];
-          this.connexion1.nom = data[0][2];
-          this.connexion1.email = data[0][4];
+          this.connectionService
+          this.connectionService.id = data[0][0];
+          this.connectionService.prenom = data[0][1];
+          this.connectionService.nom = data[0][2];
+          this.connectionService.email = data[0][4];
+          console.log(this.connectionService);
          
-          this.navCtrl.navigateForward('/accueil'); this.app.maj();
+          this.navCtrl.navigateForward('/accueil');
+          this.app.maj();
         }
     },
     err => {

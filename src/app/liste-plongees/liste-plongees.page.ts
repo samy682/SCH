@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from '@ionic/angular';
 import { DetailsPlongeePage } from '../details-plongee/details-plongee.page';
 import { ConnectionService } from '../connection.service';
@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
   templateUrl: './liste-plongees.page.html',
   styleUrls: ['./liste-plongees.page.scss'],
 })
-export class ListePlongeesPage  {
+export class ListePlongeesPage implements OnInit {
   plonge: Observable<any>;
   plongeeList;
 
@@ -26,34 +26,28 @@ export class ListePlongeesPage  {
      this.plongeeList = data; 
     // console.log("nom connexion : ", this.connexion.nom);
     
-     for(let plongee of this.plongeeList)
-    {
-      if(this.connexion.nom ==  plongee[5] && this.connexion.prenom ==  plongee[4] )
+      for(let plongee of this.plongeeList)
       {
-        console.log("Directeur = ", this.connexion.nom);
-       //HTML elem =  document.getElementsByClassName("item-content");   
-      
-       
-       
+        if(this.connexion.nom ==  plongee[5] && this.connexion.prenom ==  plongee[4] )
+        {
+         
+        
+        
+        
+        }
       }
-    }
-    //let games : HTMLCollectionOf<Element> = document.getElementsByClassName("item-content")
-    //console.log("Test",games.item);
-    let elements = document.getElementsByClassName("item-content");
-    for (let key of Object.keys(elements)) {
-      if(elements.hasOwnProperty(key)) {
-        console.log(elements[key]);
-      }
-    }
-
-
-
-
 
     }) 
+  }
 
-   
-
+  ngOnInit(){
+    NodeList.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
+    HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
+    var list= document.getElementsByClassName("item-content");
+    console.log(list);
+    [].forEach.call(list, function(el) {
+        console.log(el.id);
+    });
   }
 
   ouvrirDetailsPlongee(plongee){
@@ -77,3 +71,4 @@ export class ListePlongeesPage  {
   }
 
 }
+
