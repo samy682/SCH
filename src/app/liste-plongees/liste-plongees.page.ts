@@ -37,16 +37,14 @@ export class ListePlongeesPage implements OnInit {
   }
 
   ngOnInit(){
-   /* NodeList.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
-    HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
-    var list= document.getElementsByClassName("item-content");
+    /*NodeList.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
+    HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];*/
+    var list : HTMLCollection;
+    list = document.getElementsByClassName("item-content");
     console.log(list);
-    console.log("test",list.length);*/
-    
-      Array.from(document.getElementsByClassName("item-content")).forEach(function(item) {
-        console.log(item);
-      });
-          
+    console.log(list.item(2));
+    console.log(list[0]);
+
   }
 
   ouvrirDetailsPlongee(plongee){

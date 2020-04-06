@@ -73,7 +73,8 @@
       <workItem from="1585140002689" duration="6838000" />
       <workItem from="1585569827094" duration="1149000" />
       <workItem from="1585573473375" duration="593000" />
-      <workItem from="1585648420301" duration="343000" />
+      <workItem from="1585648420301" duration="2230000" />
+      <workItem from="1586171019974" duration="1220000" />
     </task>
     <servers />
   </component>
@@ -101,10 +102,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="604" y="365" key="NewPhpFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1581948708452" />
-    <state x="477" y="261" key="com.intellij.ide.util.TipDialog" timestamp="1585648418384">
+    <state x="477" y="261" key="com.intellij.ide.util.TipDialog" timestamp="1586171040147">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="477" y="261" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1585648418384" />
+    <state x="477" y="261" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1586171040147" />
     <state x="425" y="197" key="run.anything.popup" timestamp="1582041127326">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
