@@ -70,7 +70,7 @@ export class LoginPage {
           document.body.appendChild(alert);
           return alert.present();
         } else {
-          this.connectionService
+         // this.connectionService
           this.connectionService.id = data[0][0];
           this.connectionService.prenom = data[0][1];
           this.connectionService.nom = data[0][2];

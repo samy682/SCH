@@ -28,26 +28,12 @@ ion-menu-button {
     text-decoration: none;
   }
   
+
+  
   ion-toolbar
   {
     --background : rgb(39, 158, 238);
   }
   ion-title{
     color: white;
-  }
-  
-  ion-button{
-    color: white;
-  }
-
-  .item-content {
-    background-color:lightblue;
-    margin: 5px;
-    padding: 15px;
-    border-radius: 25px;
-  }
-
-  .add{
-    color : red;
-    padding-right: 2px;
   }

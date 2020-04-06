@@ -37,13 +37,16 @@ export class ListePlongeesPage implements OnInit {
   }
 
   ngOnInit(){
-    NodeList.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
+   /* NodeList.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
     HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
     var list= document.getElementsByClassName("item-content");
     console.log(list);
-    [].forEach.call(list, function(el) {
-        console.log(el.id);
-    });
+    console.log("test",list.length);*/
+    
+      Array.from(document.getElementsByClassName("item-content")).forEach(function(item) {
+        console.log(item);
+      });
+          
   }
 
   ouvrirDetailsPlongee(plongee){
@@ -63,6 +66,11 @@ export class ListePlongeesPage implements OnInit {
       this.navCtrl.navigateForward('/details-plongee/' + plongee[0]);
     }
     
+  }
+
+  ouvrirAjoutPlongee()
+  {
+    this.navCtrl.navigateForward('ajout-plongee');
   }
 
 }
