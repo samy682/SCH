@@ -22,7 +22,7 @@ $router->get('/get/membre/niveau/gonfleur', 'Index#getMembreNiveauGonfleur');
 $router->get('/get/lieu', 'Index#getLieuPlongee');
 $router->get('/get/membre/:id', 'Index#getMembre');
 $router->get('/get/niveau/:id', 'Index#getNiveau');
-$router->get('/put/:date-:lieu-:dp-:secu-:gonfleur-:type', 'Index#addPlongee');
+$router->get('/put/plongee/:date-:lieu-:dp-:secu-:gonfleur-:type', 'Index#putPlongee');
 
 // Router run
 $router->run();
