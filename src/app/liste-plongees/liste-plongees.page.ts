@@ -44,6 +44,7 @@ export class ListePlongeesPage implements OnInit {
     console.log(list);
     console.log(list.item(2));
     console.log(list[0]);
+
   }
 
   ouvrirDetailsPlongee(plongee){
@@ -63,6 +64,11 @@ export class ListePlongeesPage implements OnInit {
       this.navCtrl.navigateForward('/details-plongee/' + plongee[0]);
     }
     
+  }
+
+  ouvrirAjoutPlongee()
+  {
+    this.navCtrl.navigateForward('ajout-plongee');
   }
 
 }

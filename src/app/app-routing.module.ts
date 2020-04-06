@@ -37,6 +37,10 @@ const routes: Routes = [
   },  {
     path: 'liste-secu',
     loadChildren: () => import('./liste-secu/liste-secu.module').then( m => m.ListeSecuPageModule)
+  },
+  {
+    path: 'ajout-plongee',
+    loadChildren: () => import('./ajout-plongee/ajout-plongee.module').then( m => m.AjoutPlongeePageModule)
   }
 
 
