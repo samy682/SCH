@@ -10,6 +10,17 @@ import { Observable } from 'rxjs';
   styleUrls: ['./ajout-plongee.page.scss'],
 })
 export class AjoutPlongeePage implements OnInit {
+
+  plongeeData = {
+    type: "",
+    lieu: "",
+    directeur: "",
+    secu: "",
+    gonfleur: ""
+  };
+
+  from_date: any;
+
   lieu: Observable<any>;
   lieuList;
 
@@ -21,41 +32,42 @@ export class AjoutPlongeePage implements OnInit {
 
   gonfleur: Observable<any>;
   gonfleurList;
-  constructor(public httpClient: HttpClient, public navCtrl: NavController,public connexion: ConnectionService) {
+
+  put: Observable<any>;
+
+  constructor(public httpClient: HttpClient, public navCtrl: NavController, public connexion: ConnectionService) {
       this.lieu = this.httpClient.get('http://api/get//lieu');
       this.lieu.subscribe(data => {
       this.lieuList = data; 
-        console.log(this.lieuList) 
-
       }) 
       this.membreDP = this.httpClient.get('http://api/get/membre/niveau/dp');
       this.membreDP.subscribe(data => {
       this.membreDPList = data; 
-      console.log(this.membreDPList) 
-
     }) 
     this.secu = this.httpClient.get('http://api/get/membre/niveau/secu');
     this.secu.subscribe(data => {
     this.secuList = data; 
-    console.log("secu",this.secuList) 
-
   }) 
   this.gonfleur = this.httpClient.get('http://api/get/membre/niveau/secu');
     this.gonfleur.subscribe(data => {
     this.gonfleurList = data; 
-    console.log("gonfleur",this.gonfleurList) 
-
-  }) 
-
-
-
-
-
-
-    
-   }
+  });
+}
 
   ngOnInit() {
+  }
+
+  ajout(){
+    console.log('http://api/put/plongee/' + this.from_date.substring(0, 10) + '-' + this.plongeeData.lieu + '-' +
+    this.plongeeData.directeur + '-' + this.plongeeData.secu + '-' + this.plongeeData.gonfleur + '-' + this.plongeeData.type);
+
+    this.put = this.httpClient.get('http://api/put/plongee/' + this.from_date.substring(0, 10) + '-' + this.plongeeData.lieu + '-' +
+     this.plongeeData.directeur + '-' + this.plongeeData.secu + '-' + this.plongeeData.gonfleur + '-' + this.plongeeData.type);
+
+    this.put.subscribe(data => {
+          this.navCtrl.navigateForward('/liste-plongees');
+          console.log(data);
+      }); 
   }
 
 }

@@ -76,7 +76,7 @@ class IndexController
     public function putPlongee($date, $lieu, $dp, $secu, $gonfleur, $type){
         $sql = "INSERT INTO plongee (date_heure, id_lieu, id_dp, id_gonfleur, id_secu, id_materiel, type_plongee)
                             VALUES ('".$date."', '".$lieu."', '".$dp."', '".$gonfleur."', '".$secu."', '1', '".$type."')";
-        echo $sql;
+        echo '[{"result":"true"}]';
        Database::getPDO()->query($sql);
     }
 

@@ -11,12 +11,12 @@
 
   <ion-item>
     <ion-label>Date</ion-label>
-    <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+    <ion-datetime pickerFormat="DD/MM/YYYY" [(ngModel)]="from_date" ></ion-datetime>
   </ion-item>
 
   <ion-item>
     <ion-label>Type de plongée</ion-label>
-    <ion-select placeholder="Select One">
+    <ion-select [(ngModel)]="plongeeData.type" placeholder="Select One">
       <ion-select-option value="explo">Exploration</ion-select-option>
       <ion-select-option value="formation">Formation</ion-select-option>
     </ion-select>
@@ -24,21 +24,21 @@
 
   <ion-item >
     <ion-label>Lieu</ion-label>
-    <ion-select placeholder="Select One" >
+    <ion-select [(ngModel)]="plongeeData.lieu" placeholder="Select One" >
       <ion-select-option  value={{lieu[0]}} *ngFor="let lieu of lieuList">{{ lieu[1] }}</ion-select-option>
     </ion-select>
   </ion-item>
 
   <ion-item>
     <ion-label>Directeur de plongée</ion-label>
-    <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+    <ion-select [(ngModel)]="plongeeData.directeur" value="brown" okText="Okay" cancelText="Dismiss">
       <ion-select-option  *ngFor="let membreDP of membreDPList" value={{membreDP[0]}}>{{membreDP[1]}} {{membreDP[2]}}</ion-select-option>
     </ion-select>
   </ion-item>
 
   <ion-item>
     <ion-label>Gonfleur</ion-label>
-    <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+    <ion-select [(ngModel)]="plongeeData.gonfleur" value="brown" okText="Okay" cancelText="Dismiss">
       <ion-select-option  *ngFor="let gonfleur of gonfleurList" value={{gonfleur[0]}}>{{gonfleur[1]}} {{gonfleur[2]}}</ion-select-option>
     </ion-select>
   </ion-item>
@@ -46,7 +46,7 @@
 
   <ion-item>
     <ion-label>Sécurité</ion-label>
-    <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+    <ion-select  [(ngModel)]="plongeeData.secu" value="brown" okText="Okay" cancelText="Dismiss">
       <ion-select-option  *ngFor="let secu of secuList" value={{secu[0]}}>{{secu[1]}} {{secu[2]}}</ion-select-option>
     
     </ion-select>
@@ -54,7 +54,7 @@
 
   <ion-row>
     <ion-col>
-      <ion-button type="submit" color="danger" expand="block" >Ajouter</ion-button>
+      <ion-button type="submit" (click)="ajout()" color="danger" expand="block" >Ajouter</ion-button>
     </ion-col>
   </ion-row>
 
