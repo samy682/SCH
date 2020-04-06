@@ -22,41 +22,33 @@
     </ion-select>
   </ion-item>
 
-  <ion-item>
+  <ion-item >
     <ion-label>Lieu</ion-label>
-    <ion-select placeholder="Select One">
-      <ion-select-option value="f">Female</ion-select-option>
-      <ion-select-option value="m">Male</ion-select-option>
+    <ion-select placeholder="Select One" >
+      <ion-select-option  value={{lieu[0]}} *ngFor="let lieu of lieuList">{{ lieu[1] }}</ion-select-option>
     </ion-select>
   </ion-item>
 
   <ion-item>
     <ion-label>Directeur de plongée</ion-label>
     <ion-select value="brown" okText="Okay" cancelText="Dismiss">
-      <ion-select-option value="brown">Brown</ion-select-option>
-      <ion-select-option value="blonde">Blonde</ion-select-option>
-      <ion-select-option value="black">Black</ion-select-option>
-      <ion-select-option value="red">Red</ion-select-option>
+      <ion-select-option  *ngFor="let membreDP of membreDPList" value={{membreDP[0]}}>{{membreDP[1]}} {{membreDP[2]}}</ion-select-option>
     </ion-select>
   </ion-item>
 
   <ion-item>
     <ion-label>Gonfleur</ion-label>
     <ion-select value="brown" okText="Okay" cancelText="Dismiss">
-      <ion-select-option value="brown">Brown</ion-select-option>
-      <ion-select-option value="blonde">Blonde</ion-select-option>
-      <ion-select-option value="black">Black</ion-select-option>
-      <ion-select-option value="red">Red</ion-select-option>
+      <ion-select-option  *ngFor="let gonfleur of gonfleurList" value={{gonfleur[0]}}>{{gonfleur[1]}} {{gonfleur[2]}}</ion-select-option>
     </ion-select>
   </ion-item>
+
 
   <ion-item>
     <ion-label>Sécurité</ion-label>
     <ion-select value="brown" okText="Okay" cancelText="Dismiss">
-      <ion-select-option value="brown">Brown</ion-select-option>
-      <ion-select-option value="blonde">Blonde</ion-select-option>
-      <ion-select-option value="black">Black</ion-select-option>
-      <ion-select-option value="red">Red</ion-select-option>
+      <ion-select-option  *ngFor="let secu of secuList" value={{secu[0]}}>{{secu[1]}} {{secu[2]}}</ion-select-option>
+    
     </ion-select>
   </ion-item>
 
