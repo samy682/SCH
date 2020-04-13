@@ -8,6 +8,7 @@ export class ConnectionService {
   private _nom: string;
   private _prenom: string;
   private _email: string;
+  private _niveau: string;
   public static _instance: ConnectionService = null;
 
   constructor() { 
@@ -33,6 +34,10 @@ export class ConnectionService {
     return this._email;
   }
 
+  get niveau(): string {
+    return this._niveau;
+  }
+
   set id(newId: string) {
     this._id = newId;
   }
@@ -49,13 +54,17 @@ export class ConnectionService {
     this._email = newEmail;
   }
 
+  set niveau(newNiveau: string) {
+    this._niveau = newNiveau;
+  }
+
   disconnect():void {
     ConnectionService._instance = null;
-    this._id= null;
-    this._email=null;
-    this._nom=null;
-    this._prenom=null;
-    
+    this._id = null;
+    this._email = null;
+    this._nom = null;
+    this._prenom = null;
+    this._niveau = null;
   }
 
 }

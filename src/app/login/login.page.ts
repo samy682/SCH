@@ -60,7 +60,6 @@ export class LoginPage {
   logForm() {
     this.connexion = this.httpClient.get('http://api/get/auth/' + this.loginData.email + "-" + this.loginData.password)
     this.connexion.subscribe(data => {
-      
         if(data.length === 0){
           const alert = document.createElement('ion-alert');
           alert.header = 'Attention';
@@ -70,12 +69,11 @@ export class LoginPage {
           document.body.appendChild(alert);
           return alert.present();
         } else {
-         // this.connectionService
           this.connectionService.id = data[0][0];
           this.connectionService.prenom = data[0][1];
           this.connectionService.nom = data[0][2];
           this.connectionService.email = data[0][4];
-          console.log(this.connectionService);
+          this.connectionService.niveau = data[0][15];
          
           this.navCtrl.navigateForward('/accueil');
           this.app.maj();

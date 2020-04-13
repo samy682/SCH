@@ -16,7 +16,7 @@ export class ListePlongeesPage implements OnInit {
 
   navParams: NavParams;
 
-  constructor(public httpClient: HttpClient, public navCtrl: NavController,public connexion: ConnectionService) { 
+  constructor(public httpClient: HttpClient, public navCtrl: NavController, public connexion: ConnectionService) { 
     this.connexion = new ConnectionService;
     this.plonge = this.httpClient.get('http://api/get/plongee');
     this.plonge
