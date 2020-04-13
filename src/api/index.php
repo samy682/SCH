@@ -13,7 +13,6 @@ $router->get('/get/plongee', 'Index#getPlongee');
 $router->get('/get/plongee/details/:id', 'Index#getDetailPlongee');
 $router->get('/get/plongee/participants/:id', 'Index#getParticipants');
 $router->get('/get/auth/:email-:password', 'Index#auth');
-$router->get('/get/plongee/membre/:idPlongee-:idMembre', 'Index#ajoutMembrePlongee');
 $router->get('/get/secu/', 'Index#getSecu');
 $router->get('/get/gonfleur/', 'Index#getGonfleur');
 $router->get('/get/membre/niveau/dp', 'Index#getMembreNiveauDP');
@@ -22,6 +21,9 @@ $router->get('/get/membre/niveau/gonfleur', 'Index#getMembreNiveauGonfleur');
 $router->get('/get/lieu', 'Index#getLieuPlongee');
 $router->get('/get/membre/:id', 'Index#getMembre');
 $router->get('/get/niveau/:id', 'Index#getNiveau');
+$router->get('/get/plongee/participant/:id_plongee-:id_membre', 'Index#getPlongeeMembreImportant');
+$router->get('/get/plongee/membre_important/:id_plongee-:id_membre', 'Index#getPlongeeParticipant');
+$router->get('/put/plongee/membre/:idPlongee-:idMembre', 'Index#putMembrePlongee');
 $router->get('/put/plongee/:date-:lieu-:dp-:secu-:gonfleur-:type', 'Index#putPlongee');
 
 // Router run

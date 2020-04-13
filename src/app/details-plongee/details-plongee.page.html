@@ -42,7 +42,7 @@
           
           </ion-list>
      
-          <ion-button shape="round" fill="outline" class="shadow-blue" (click)="inscriptionPlongee()">Rejoindre la plongée</ion-button>
+          <ion-button *ngIf="ajoutFunction==true" shape="round" fill="outline" class="shadow-blue" (click)="inscriptionPlongee()">Rejoindre la plongée</ion-button>
       </p>
     </ion-card-content>
   </ion-card>
