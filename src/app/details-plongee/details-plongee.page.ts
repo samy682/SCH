@@ -57,7 +57,8 @@ export class DetailsPlongeePage implements OnInit {
 
   inscriptionPlongee()
   {
-    console.log("")
+    console.log(this.plongee)
+    console.log("id Connexon : ",ConnectionService._instance.id )
     this.ajout = this.httpClient.get('http://api/put/plongee/membre/'+ this.plongee[0] +'-'+ ConnectionService._instance.id);
     this.ajout.subscribe(data => {
       this.ajout = data;

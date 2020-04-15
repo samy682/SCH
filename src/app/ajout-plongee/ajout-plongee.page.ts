@@ -65,7 +65,15 @@ export class AjoutPlongeePage implements OnInit {
      this.plongeeData.directeur + '-' + this.plongeeData.secu + '-' + this.plongeeData.gonfleur + '-' + this.plongeeData.type);
 
     this.put.subscribe(data => {
-          this.navCtrl.navigateForward('/liste-plongees');
+          this.navCtrl.navigateForward('/accueil');
+          const alert = document.createElement('ion-alert');
+          //alert.header = 'Réussi';
+          alert.subHeader = "Ajout d'une plongée";
+          alert.message = 'Réussi';
+          alert.buttons = ['OK'];
+        
+          document.body.appendChild(alert);
+          return alert.present();
           console.log(data);
       }); 
   }

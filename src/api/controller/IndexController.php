@@ -30,7 +30,7 @@ class IndexController
     public function getPlongee(){
         $result = Database::getPDO()->query("SELECT plongee.id, plongee.date_heure, plongee.type_plongee, lieu_plongee.adr_commune, membre.nom, membre.prenom FROM plongee
          INNER JOIN lieu_plongee ON plongee.id_lieu = lieu_plongee.id
-         INNER JOIN membre ON plongee.id_dp = membre.id WHERE plongee.date_heure < NOW()");
+         INNER JOIN membre ON plongee.id_dp = membre.id WHERE plongee.date_heure >= CURDATE()");
         $obj = $result->fetchAll();
         $this->utf8_encode_deep($obj);
         echo json_encode($obj);
