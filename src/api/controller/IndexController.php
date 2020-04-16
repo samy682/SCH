@@ -124,6 +124,13 @@ class IndexController
         echo json_encode($obj);
     }
 
+    public function getMaterielClub()
+    {
+        $result = Database::getPDO()->query('SELECT * FROM materielclub');
+        $obj = $result->fetchAll();
+        echo json_encode($obj);
+    }
+
     public function utf8_encode_deep(&$input) {
         if (is_string($input)) {
             $input = utf8_encode($input);

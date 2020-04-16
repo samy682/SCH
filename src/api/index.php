@@ -25,7 +25,7 @@ $router->get('/get/plongee/participant/:id_plongee-:id_membre', 'Index#getPlonge
 $router->get('/get/plongee/membre_important/:id_plongee-:id_membre', 'Index#getPlongeeParticipant');
 $router->get('/put/plongee/membre/:idPlongee-:idMembre', 'Index#putMembrePlongee');
 $router->get('/put/plongee/:date-:lieu-:dp-:secu-:gonfleur-:type', 'Index#putPlongee');
-
+$router->get('/get/materielclub','Index#getMaterielClub');
 // Router run
 $router->run();
 

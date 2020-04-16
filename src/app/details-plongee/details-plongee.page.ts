@@ -73,5 +73,9 @@ export class DetailsPlongeePage implements OnInit {
     this.navCtrl.navigateForward('/liste-plongees');
     
   }
+  Reservation()
+  {
+    this.navCtrl.navigateForward('/reservation');
+  }
 
 }
