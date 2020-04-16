@@ -9,8 +9,8 @@ class IndexController
     }
 
     public function putPlongee($date, $lieu, $dp, $secu, $gonfleur, $type){
-        $sql = "INSERT INTO plongee (date_heure, id_lieu, id_dp, id_gonfleur, id_secu, id_materiel, type_plongee)
-                            VALUES ('".$date."', '".$lieu."', '".$dp."', '".$gonfleur."', '".$secu."', '1', '".$type."')";
+        $sql = "INSERT INTO plongee (date_heure, id_lieu, id_dp, id_gonfleur, id_secu, type_plongee)
+                            VALUES ('".$date."', '".$lieu."', '".$dp."', '".$gonfleur."', '".$secu."', '".$type."')";
         Database::getPDO()->query($sql);
 
         $result = Database::getPDO()->query("SELECT id from plongee ORDER BY id DESC LIMIT 1");
@@ -99,6 +99,7 @@ class IndexController
     public function auth($email, $password){
         $result = Database::getPDO()->query('SELECT * FROM membre WHERE login="'.$email. '" AND password="'.$password.'"');
         $obj = $result->fetchAll();
+        $this->utf8_encode_deep($obj);
         echo json_encode($obj);
     }
 
@@ -106,6 +107,7 @@ class IndexController
         $result = Database::getPDO()->query('SELECT plongee.id, membre.prenom, membre.nom, membre.mail_redirection FROM plongee
                                             INNER JOIN membre ON plongee.id_secu = membre.id');
         $obj = $result->fetchAll();
+        $this->utf8_encode_deep($obj);
         echo json_encode($obj);
     }
 
@@ -113,6 +115,7 @@ class IndexController
         $result = Database::getPDO()->query('SELECT plongee.id, membre.prenom, membre.nom, membre.mail_redirection FROM plongee
                                             INNER JOIN membre ON plongee.id_gonfleur = membre.id');
         $obj = $result->fetchAll();
+        $this->utf8_encode_deep($obj);
         echo json_encode($obj);
     }
 
@@ -128,6 +131,7 @@ class IndexController
     {
         $result = Database::getPDO()->query('SELECT * FROM materielclub');
         $obj = $result->fetchAll();
+        $this->utf8_encode_deep($obj);
         echo json_encode($obj);
     }
 
