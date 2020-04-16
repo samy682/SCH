@@ -17,6 +17,19 @@ export class ListePlongeesPage implements OnInit {
   navParams: NavParams;
 
   constructor(public httpClient: HttpClient, public navCtrl: NavController, public connexion: ConnectionService) { 
+    
+  }
+
+  ngOnInit(){
+    
+    /*var list : HTMLCollection;
+    list = document.getElementsByClassName("item-content");
+    console.log(list);
+    console.log(list.item(2));
+    console.log(list[0]);*/
+  }
+
+  ionViewWillEnter() {
     this.connexion = new ConnectionService;
     this.plonge = this.httpClient.get('http://api/get/plongee');
     this.plonge
@@ -26,26 +39,13 @@ export class ListePlongeesPage implements OnInit {
       {
         if(this.connexion.nom ==  plongee[5] && this.connexion.prenom ==  plongee[4] )
         {
-         
-        
-        
-        
+
         }
       }
 
-    }) 
+    });
   }
-
-  ngOnInit(){
-    /*NodeList.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
-    HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];*/
-    var list : HTMLCollection;
-    list = document.getElementsByClassName("item-content");
-    console.log(list);
-    console.log(list.item(2));
-    console.log(list[0]);
-
-  }
+  
 
   ouvrirDetailsPlongee(plongee){
     if(this.connexion.id == null && this.connexion.nom == null)
