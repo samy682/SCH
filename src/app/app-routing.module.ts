@@ -41,6 +41,10 @@ const routes: Routes = [
   {
     path: 'ajout-plongee',
     loadChildren: () => import('./ajout-plongee/ajout-plongee.module').then( m => m.AjoutPlongeePageModule)
+  },
+  {
+    path: 'reservation',
+    loadChildren: () => import('./reservation/reservation.module').then( m => m.ReservationPageModule)
   }
 
 
