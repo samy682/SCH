@@ -15,17 +15,17 @@
     
     <ion-card-content>
       <ion-card-title>
-       Details de la plonge n° {{plongee[0]}} 
+       Details de la plonge n° {{plongee["id"]}} 
       </ion-card-title>
 
       <p>
-        Date: {{plongee[1]}} 
+        Date: {{plongee["date_heure"]}} 
         <br/>
-        Type: {{plongee[2]}} 
+        Type: {{plongee["type_plongee"]}} 
         <br/>
-        Lieu: {{plongee[3]}} 
+        Lieu: {{plongee["adr_commune"]}} 
         <br/>
-        DP: {{plongee[4]}} {{plongee[5]}}  
+        DP: {{plongee["prenom"]}} {{plongee["nom"]}}  
         <br/>
         Liste des membres:
       
@@ -34,8 +34,8 @@
             
             <ion-item *ngFor="let membre of membresList">
              
-             {{membre[0]}}
-             {{membre[1]}}
+             {{membre["prenom"]}}
+             {{membre["nom"]}}
               
               
             </ion-item>

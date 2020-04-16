@@ -27,6 +27,7 @@ export class DetailsPlongeePage implements OnInit {
       this.plongee = this.httpClient.get('http://api/get/plongee/details/' + this.id)
       this.plongee.subscribe(data => {
       this.plongee = data;
+      console.log(this.plongee);
     },
     err => {
       console.log('Error: ' + err.error);
@@ -50,10 +51,7 @@ export class DetailsPlongeePage implements OnInit {
       console.log('Message: ' + err.message);
       console.log('Status: ' + err.status);
     });
-
-    
-
-}
+  }
 
   inscriptionPlongee()
   {
@@ -73,6 +71,7 @@ export class DetailsPlongeePage implements OnInit {
     this.navCtrl.navigateForward('/liste-plongees');
     
   }
+  
   Reservation()
   {
     this.navCtrl.navigateForward('/reservation');

@@ -26,8 +26,8 @@ export class ListeSecuPage implements OnInit {
     })
   }
 
-  ouvrirDetailsPlongee(gonfleur){
-    this.navCtrl.navigateForward('/details-plongee/' + gonfleur[0]);
+  ouvrirDetailsPlongee(secu){
+    this.navCtrl.navigateForward('/details-plongee/' + secu["id"]);
   }
 
 }
