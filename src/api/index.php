@@ -9,6 +9,8 @@ $router = new Router($_GET['url']);
 header('Content-type: text/html; charset=UTF-8');
 
 // Routes GET
+$router->get('/get/materielclub','Index#getMaterielClub');
+$router->get('/get/materielperso/:id','Index#getMaterielPerso');
 $router->get('/get/plongee', 'Index#getPlongee');
 $router->get('/get/plongee/details/:id', 'Index#getDetailPlongee');
 $router->get('/get/plongee/participants/:id', 'Index#getParticipants');
@@ -25,7 +27,8 @@ $router->get('/get/plongee/participant/:id_plongee-:id_membre', 'Index#getPlonge
 $router->get('/get/plongee/membre_important/:id_plongee-:id_membre', 'Index#getPlongeeParticipant');
 $router->get('/put/plongee/membre/:idPlongee-:idMembre', 'Index#putMembrePlongee');
 $router->get('/put/plongee/:date-:lieu-:dp-:secu-:gonfleur-:type', 'Index#putPlongee');
-$router->get('/get/materielclub','Index#getMaterielClub');
+$router->get('/put/materielclub/:id_membre-:id_plongee-:id_materiel','Index#putMaterielClub');
+$router->get('/put/materielperso/:id_membre-:id_plongee-:id_materiel','Index#putMaterielPerso');
 // Router run
 $router->run();
 

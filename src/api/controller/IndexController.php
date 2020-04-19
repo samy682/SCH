@@ -129,11 +129,35 @@ class IndexController
 
     public function getMaterielClub()
     {
-        $result = Database::getPDO()->query('SELECT * FROM materielclub');
+        $result = Database::getPDO()->query('SELECT * FROM materielclub INNER JOIN type_materiel 
+                                            ON type_materiel.id = materielclub.id_type_materiel');
         $obj = $result->fetchAll();
         $this->utf8_encode_deep($obj);
         echo json_encode($obj);
     }
+
+    public function getMaterielPerso($id)
+    {
+        $result = Database::getPDO()->query('SELECT * FROM materielperso INNER JOIN type_materiel 
+                                            ON type_materiel.id = materielperso.id_type_materiel
+                                            WHERE id_proprietaire='.$id);
+        $obj = $result->fetchAll();
+        $this->utf8_encode_deep($obj);
+        echo json_encode($obj);
+    }
+
+    public function putMaterielClub($id_membre, $id_plongee , $id_materiel)
+    {
+        $result = Database::getPDO()->query('INSERT INTO reserveclub VALUES("'. $id_membre .'", "'. $id_plongee .'", "'. $id_materiel .'")');
+        echo '[{"result":"true"}]';
+    }
+
+    public function putMaterielPerso($id_membre, $id_plongee , $id_materiel)
+    {
+        $result = Database::getPDO()->query('INSERT INTO reserveperso VALUES("'. $id_membre .'", "'. $id_plongee .'", "'. $id_materiel .'")');
+        echo '[{"result":"true"}]';
+    }
+
 
     public function utf8_encode_deep(&$input) {
         if (is_string($input)) {
