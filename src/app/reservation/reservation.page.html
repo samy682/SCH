@@ -10,12 +10,28 @@
 
 <ion-content>
 
+    <ion-item>
+      <ion-label>Réservation du matériel du club</ion-label>
+      <ion-select [(ngModel)]="materielClubData.id" multiple="true">
+        <ion-select-option *ngFor="let materiel of materielClubList" value={{materiel[0]}}>
+          {{materiel["description"]}} - {{materiel["marque"]}} - {{materiel["noserie"]}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
 
-  <ion-item>
-    <ion-label>Réservation du matériel club</ion-label>
-    <ion-select placeholder="Select One">
-     
-    </ion-select>
-  </ion-item>
+    <ion-item>
+      <ion-label>Réservation du matériel personnel</ion-label>
+      <ion-select [(ngModel)]="materielPersoData.id" multiple="true">
+        <ion-select-option *ngFor="let materiel of materielPersoList" value={{materiel[0]}}>
+          {{materiel["description"]}} - {{materiel["marque"]}} - {{materiel["noserie"]}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" (click)="reserver()" color="danger" expand="block" >Réserver</ion-button>
+      </ion-col>
+    </ion-row>
 
 </ion-content>

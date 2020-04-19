@@ -31,14 +31,14 @@
 
   <ion-item>
     <ion-label>Directeur de plongée</ion-label>
-    <ion-select [(ngModel)]="plongeeData.directeur" value="brown" okText="Okay" cancelText="Dismiss">
+    <ion-select [(ngModel)]="plongeeData.directeur" okText="Okay" cancelText="Dismiss">
       <ion-select-option  *ngFor="let membreDP of membreDPList" value={{membreDP[0]}}>{{membreDP[1]}} {{membreDP[2]}}</ion-select-option>
     </ion-select>
   </ion-item>
 
   <ion-item>
     <ion-label>Gonfleur</ion-label>
-    <ion-select [(ngModel)]="plongeeData.gonfleur" value="brown" okText="Okay" cancelText="Dismiss">
+    <ion-select [(ngModel)]="plongeeData.gonfleur" okText="Okay" cancelText="Dismiss">
       <ion-select-option  *ngFor="let gonfleur of gonfleurList" value={{gonfleur[0]}}>{{gonfleur[1]}} {{gonfleur[2]}}</ion-select-option>
     </ion-select>
   </ion-item>
@@ -46,7 +46,7 @@
 
   <ion-item>
     <ion-label>Sécurité</ion-label>
-    <ion-select  [(ngModel)]="plongeeData.secu" value="brown" okText="Okay" cancelText="Dismiss">
+    <ion-select  [(ngModel)]="plongeeData.secu" okText="Okay" cancelText="Dismiss">
       <ion-select-option  *ngFor="let secu of secuList" value={{secu[0]}}>{{secu[1]}} {{secu[2]}}</ion-select-option>
     
     </ion-select>

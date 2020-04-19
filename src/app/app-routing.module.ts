@@ -34,7 +34,8 @@ const routes: Routes = [
   {
     path: 'liste-gonfleurs',
     loadChildren: () => import('./liste-gonfleurs/liste-gonfleurs.module').then( m => m.ListeGonfleursPageModule)
-  },  {
+  },
+  {
     path: 'liste-secu',
     loadChildren: () => import('./liste-secu/liste-secu.module').then( m => m.ListeSecuPageModule)
   },
@@ -43,8 +44,12 @@ const routes: Routes = [
     loadChildren: () => import('./ajout-plongee/ajout-plongee.module').then( m => m.AjoutPlongeePageModule)
   },
   {
-    path: 'reservation',
+    path: 'reservation/:id',
     loadChildren: () => import('./reservation/reservation.module').then( m => m.ReservationPageModule)
+  },
+  {
+    path: 'details-reservation',
+    loadChildren: () => import('./details-reservation/details-reservation.module').then( m => m.DetailsReservationPageModule)
   }
 
 
