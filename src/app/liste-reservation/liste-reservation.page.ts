@@ -1,34 +1,34 @@
+
 import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from '@ionic/angular';
 import { ConnectionService } from '../connection.service';
 import {HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
-@Component({
-  selector: 'app-details-reservation',
-  templateUrl: './details-reservation.page.html',
-  styleUrls: ['./details-reservation.page.scss'],
-})
-export class DetailsReservationPage implements OnInit {
 
+@Component({
+  selector: 'app-liste-reservation',
+  templateUrl: './liste-reservation.page.html',
+  styleUrls: ['./liste-reservation.page.scss'],
+})
+export class ListeReservationPage implements OnInit {
   id_plongee;
-  id_membre;
   reservationPersoRequest: Observable<any>;
   listeReservationPersoList;
 
   reservationClubRequest: Observable<any>;
   listeReservationClubList;
+
   constructor(private activatedRoute: ActivatedRoute, public httpClient: HttpClient, public connexionService: ConnectionService, public navCtrl: NavController) { }
 
   ngOnInit() {
     this.connexionService = new ConnectionService();
-    this.id_plongee = this.activatedRoute.snapshot.paramMap.get('id_plongee');
-    this.id_membre = this.activatedRoute.snapshot.paramMap.get('id_membre');
+    this.id_plongee = this.activatedRoute.snapshot.paramMap.get('id');
 
-    this.reservationPersoRequest = this.httpClient.get('http://api/get/listeReservationPerso/' + this.id_plongee + "-" + this.id_membre);
+    this.reservationPersoRequest = this.httpClient.get('http://api/get/listeReservationPerso/' + this.id_plongee);
     this.reservationPersoRequest.subscribe(data => {
       this.listeReservationPersoList = data;
-      console.log("TEST",this.listeReservationPersoList);
+      console.log(this.listeReservationPersoList);
     },
     err => {
       console.log('Error: ' + err.error);
@@ -37,10 +37,13 @@ export class DetailsReservationPage implements OnInit {
       console.log('Status: ' + err.status);
     });
 
-    this.reservationClubRequest = this.httpClient.get('http://api/get/listeReservationClub/' + this.id_plongee + "-" + this.id_membre);
+
+  
+
+    this.reservationClubRequest = this.httpClient.get('http://api/get/listeReservationClub/' + this.id_plongee);
     this.reservationClubRequest.subscribe(data => {
-      this.listeReservationClubList = data;
-      console.log("TEST",this.listeReservationClubList);
+      this.reservationClubRequest = data;
+      console.log(this.listeReservationClubList);
     },
     err => {
       console.log('Error: ' + err.error);
@@ -48,8 +51,15 @@ export class DetailsReservationPage implements OnInit {
       console.log('Message: ' + err.message);
       console.log('Status: ' + err.status);
     });
+
+
+
+
 
 
   }
+
+
+
 
 }

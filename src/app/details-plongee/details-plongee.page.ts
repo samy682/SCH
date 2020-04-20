@@ -77,4 +77,8 @@ export class DetailsPlongeePage implements OnInit {
     this.navCtrl.navigateForward('/reservation/' + this.id);
   }
 
+  detailReservation(membre)
+  {
+    this.navCtrl.navigateForward('/details-reservation/' + this.id +"/" + membre["id"]);
+  }
 }

@@ -88,7 +88,7 @@ class IndexController
     }
 
     public function getParticipants($id){
-        $result = Database::getPDO()->query("SELECT membre.nom, membre.prenom FROM membre
+        $result = Database::getPDO()->query("SELECT membre.nom, membre.prenom, membre.id FROM membre
          INNER JOIN participe ON participe.id_membre = membre.id
          INNER JOIN plongee ON participe.id_plongee = plongee.id WHERE plongee.id = ".$id);
         $obj = $result->fetchAll();
@@ -175,5 +175,30 @@ class IndexController
                 $this->utf8_encode_deep($input->$var);
             }
         }
+    }
+
+
+    public function listeReservationPerso($id_plongee, $id_membre)
+    {
+        
+        $result = Database::getPDO()->query('SELECT reserveperso.id_membre,reserveperso.id_plongee, reserveperso.id_materiel, type_materiel.description, membre.nom,membre.prenom  FROM 					reserveperso INNER JOIN type_materiel 
+        ON type_materiel.id = reserveperso.id_materiel
+	INNER JOIN membre ON membre.id = reserveperso.id_membre
+        WHERE reserveperso.id_plongee='.$id_plongee. ' AND reserveperso.id_membre = '.$id_membre);
+            $obj = $result->fetchAll();
+            $this->utf8_encode_deep($obj);
+            echo json_encode($obj);
+    }
+
+    public function listeReservationClub($id_plongee, $id_membre)
+    {
+        
+        $result = Database::getPDO()->query('SELECT reserveclub.id_membre,reserveclub.id_plongee, reserveclub.id_typemateriel, type_materiel.description, membre.nom,membre.prenom  FROM 		reserveclub INNER JOIN type_materiel 
+        ON type_materiel.id = reserveclub.id_typemateriel
+	    INNER JOIN membre ON membre.id = reserveclub.id_membre
+        WHERE reserveclub.id_plongee='.$id_plongee. ' AND reserveclub.id_membre = '.$id_membre);
+            $obj = $result->fetchAll();
+            $this->utf8_encode_deep($obj);
+            echo json_encode($obj);
     }
 }

@@ -32,7 +32,7 @@
           
           <ion-list>
             
-            <ion-item *ngFor="let membre of membresList">
+            <ion-item *ngFor="let membre of membresList" (click)="detailReservation(membre)">
              
              {{membre["prenom"]}}
              {{membre["nom"]}}
@@ -41,6 +41,7 @@
             </ion-item>
           
           </ion-list>
+        
      
           <ion-button *ngIf="ajoutFunction==true" shape="round" fill="outline" class="shadow-blue" (click)="inscriptionPlongee()">Rejoindre la plongée</ion-button>
           <ion-button  shape="round" fill="outline" class="shadow-blue" (click)="Reservation()">Réserver du MATOS</ion-button>

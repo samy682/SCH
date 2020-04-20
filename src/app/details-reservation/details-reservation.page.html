@@ -1,9 +1,29 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>details-reservation</ion-title>
+<ion-header [translucent]="true">
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Détails des réservations</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
 
+
+
+
+  <ion-list>
+    
+    <ion-item shape="round" detail="false" button  *ngFor="let resaPerso of listeReservationPersoList">
+     
+      <div class="item-content">
+      
+        Type : {{ resaPerso["description"] }} <br>
+      </div>
+  
+      
+    </ion-item>
+  
+  </ion-list>
+ 
 </ion-content>
