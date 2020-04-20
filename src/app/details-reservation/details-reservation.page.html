@@ -13,17 +13,25 @@
 
 
   <ion-list>
-    
-    <ion-item shape="round" detail="false" button  *ngFor="let resaPerso of listeReservationPersoList">
-     
+    <ion-list-header>
+      <ion-label>Réservations personnelles</ion-label>
+    </ion-list-header>
+    <ion-item shape="round" detail="false" button  *ngFor="let reservation of reservationsPerso">
       <div class="item-content">
-      
-        Type : {{ resaPerso["description"] }} <br>
+        Type : {{ reservation["description"] }} <br>
       </div>
-  
-      
     </ion-item>
-  
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Réservations du club</ion-label>
+    </ion-list-header>
+    <ion-item shape="round" detail="false" button  *ngFor="let reservation of reservationsClub">
+      <div class="item-content">
+        Type : {{ reservation["description"] }} <br>
+      </div>
+    </ion-item>
   </ion-list>
  
 </ion-content>

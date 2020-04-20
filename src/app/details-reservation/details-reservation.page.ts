@@ -14,10 +14,10 @@ export class DetailsReservationPage implements OnInit {
   id_plongee;
   id_membre;
   reservationPersoRequest: Observable<any>;
-  listeReservationPersoList;
+  reservationsPerso;
 
   reservationClubRequest: Observable<any>;
-  listeReservationClubList;
+  reservationsClub;
   constructor(private activatedRoute: ActivatedRoute, public httpClient: HttpClient, public connexionService: ConnectionService, public navCtrl: NavController) { }
 
   ngOnInit() {
@@ -27,8 +27,8 @@ export class DetailsReservationPage implements OnInit {
 
     this.reservationPersoRequest = this.httpClient.get('http://api/get/listeReservationPerso/' + this.id_plongee + "-" + this.id_membre);
     this.reservationPersoRequest.subscribe(data => {
-      this.listeReservationPersoList = data;
-      console.log("TEST",this.listeReservationPersoList);
+      this.reservationsPerso = data;
+      console.log("TEST", this.reservationsPerso);
     },
     err => {
       console.log('Error: ' + err.error);
@@ -39,8 +39,8 @@ export class DetailsReservationPage implements OnInit {
 
     this.reservationClubRequest = this.httpClient.get('http://api/get/listeReservationClub/' + this.id_plongee + "-" + this.id_membre);
     this.reservationClubRequest.subscribe(data => {
-      this.listeReservationClubList = data;
-      console.log("TEST",this.listeReservationClubList);
+      this.reservationsClub = data;
+      console.log("TEST", this.reservationsClub);
     },
     err => {
       console.log('Error: ' + err.error);

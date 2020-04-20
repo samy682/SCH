@@ -50,10 +50,6 @@ const routes: Routes = [
   {
     path: 'details-reservation/:id_plongee/:id_membre',
     loadChildren: () => import('./details-reservation/details-reservation.module').then( m => m.DetailsReservationPageModule)
-  },
-  {
-    path: 'liste-reservation/:id',
-    loadChildren: () => import('./liste-reservation/liste-reservation.module').then( m => m.ListeReservationPageModule)
   }
 
 
