@@ -34,7 +34,7 @@ export class ReservationPage implements OnInit {
   ngOnInit() {
     this.connexionService = new ConnectionService();
     this.id_plongee = this.activatedRoute.snapshot.paramMap.get('id');
-    this.reservationClubRequest = this.httpClient.get('http://api/get/materielclub');
+    this.reservationClubRequest = this.httpClient.get('http://api/get/materiel/club');
       this.reservationClubRequest.subscribe(data => {
       this.materielClubList = data;
     },
@@ -45,7 +45,7 @@ export class ReservationPage implements OnInit {
       console.log('Status: ' + err.status);
     });
 
-    this.reservationPersoRequest = this.httpClient.get('http://api/get/materielperso/' + this.connexionService.id);
+    this.reservationPersoRequest = this.httpClient.get('http://api/get/materiel/perso/' + this.connexionService.id);
       this.reservationPersoRequest.subscribe(data => {
       this.materielPersoList = data;
       console.log(this.materielPersoList);

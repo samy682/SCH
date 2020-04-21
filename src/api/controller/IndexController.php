@@ -192,7 +192,7 @@ class IndexController
 
     public function listeReservationClub($id_plongee, $id_membre)
     {
-        
+
         $result = Database::getPDO()->query('SELECT reserveclub.id_membre,reserveclub.id_plongee, reserveclub.id_typemateriel, type_materiel.description, membre.nom,membre.prenom  FROM 		reserveclub INNER JOIN type_materiel 
         ON type_materiel.id = reserveclub.id_typemateriel
 	    INNER JOIN membre ON membre.id = reserveclub.id_membre

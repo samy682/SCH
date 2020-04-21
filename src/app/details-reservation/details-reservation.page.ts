@@ -25,7 +25,7 @@ export class DetailsReservationPage implements OnInit {
     this.id_plongee = this.activatedRoute.snapshot.paramMap.get('id_plongee');
     this.id_membre = this.activatedRoute.snapshot.paramMap.get('id_membre');
 
-    this.reservationPersoRequest = this.httpClient.get('http://api/get/listeReservationPerso/' + this.id_plongee + "-" + this.id_membre);
+    this.reservationPersoRequest = this.httpClient.get('http://api/get/reservation/perso/' + this.id_plongee + "-" + this.id_membre);
     this.reservationPersoRequest.subscribe(data => {
       this.reservationsPerso = data;
       console.log("TEST", this.reservationsPerso);
@@ -37,7 +37,7 @@ export class DetailsReservationPage implements OnInit {
       console.log('Status: ' + err.status);
     });
 
-    this.reservationClubRequest = this.httpClient.get('http://api/get/listeReservationClub/' + this.id_plongee + "-" + this.id_membre);
+    this.reservationClubRequest = this.httpClient.get('http://api/get/reservation/club/' + this.id_plongee + "-" + this.id_membre);
     this.reservationClubRequest.subscribe(data => {
       this.reservationsClub = data;
       console.log("TEST", this.reservationsClub);
