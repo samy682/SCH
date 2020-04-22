@@ -48,6 +48,7 @@ export class DetailsReservationPage implements OnInit {
       console.log('Message: ' + err.message);
       console.log('Status: ' + err.status);
     });
+    // 
 
 
   }
